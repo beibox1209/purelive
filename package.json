@@ -1,0 +1,50 @@
+{
+  "name": "purelive",
+  "version": "1.5.0",
+  "description": "净播 PureLive — 只留画面的直播间播放器",
+  "main": "electron/main.js",
+  "author": "PureLive",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "start": "electron .",
+    "dev": "electron . --dev",
+    "build": "electron-builder --win portable"
+  },
+  "devDependencies": {
+    "electron": "45.1.0",
+    "electron-builder": "26.18.0"
+  },
+  "build": {
+    "appId": "com.purelive.player",
+    "productName": "PureLive",
+    "copyright": "Copyright © 2026 PureLive",
+    "asar": true,
+    "directories": {
+      "output": "dist",
+      "buildResources": "build"
+    },
+    "files": [
+      "electron/**/*",
+      "src/**/*",
+      "package.json",
+      "README.md"
+    ],
+    "win": {
+      "target": [
+        {
+          "target": "portable",
+          "arch": [
+            "x64"
+          ]
+        }
+      ],
+      "icon": "build/icon.ico",
+      "artifactName": "PureLive-${version}-portable.${ext}"
+    },
+    "portable": {
+      "artifactName": "PureLive-${version}-portable.${ext}",
+      "requestExecutionLevel": "user"
+    }
+  }
+}

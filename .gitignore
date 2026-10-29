@@ -1,0 +1,12 @@
+node_modules/
+dist/
+diag/
+tools/
+*.log
+*.tgz
+.env
+
+edge-profile/
+avatar.jpg
+video/
+*.db

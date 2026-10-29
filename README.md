@@ -9,7 +9,6 @@
 前往 [Releases](https://github.com/beibox1209/purelive/releases/latest) 下载：
 
 - `PureLive-1.5.0-win64.zip`：解压后运行，启动最快，推荐。
-- `PureLive-1.5.0-portable.exe`：单文件便携版，每次启动需自解压。
 
 ## 功能
 
@@ -113,7 +112,7 @@
 ## 启动速度
 
 - `PureLive-1.5.0-win64.zip` 解压一次后直接运行 `PureLive.exe`，启动最快，推荐日常使用。
-- `PureLive-1.5.0-portable.exe` 是单文件便携版，每次启动都要先自解压到系统临时目录，因此会比 zip 版慢几秒；这是便携封装的限制，不是程序本身在加载。
+- 发布页只提供 zip 版，不再分发启动较慢的单文件便携版。
 - 程序会先显示直播架，再在后台补充封面，不会为了抓封面阻塞启动。
 
 ## 从源码运行
@@ -125,13 +124,13 @@ pnpm install
 pnpm start
 ```
 
-打包 Windows 便携版：
+打包 Windows 版本：
 
 ```powershell
 pnpm run build
 ```
 
-产物输出在 `dist/PureLive-1.5.0-portable.exe` 和 `dist/PureLive-1.5.0-win64.zip`。当前构建未做代码签名，Windows 首次运行时可能显示「未知发布者」提示，选择「更多信息 → 仍要运行」即可。
+发布产物为 `dist/PureLive-1.5.0-win64.zip`。当前构建未做代码签名，Windows 首次运行时可能显示「未知发布者」提示，选择「更多信息 → 仍要运行」即可。
 
 ## 说明
 
